@@ -11,6 +11,7 @@ export class FormComponent implements OnInit {
 
   myForm: any
   datas: any
+  editedid: any;
 
   constructor(private api: ApiService) { }
 
@@ -28,7 +29,7 @@ export class FormComponent implements OnInit {
       password: new FormControl("")
     })
     this.api.get("posts").subscribe((result) => {
-      console.log(result);
+      // console.log(result);
       this.datas = result;
     })
   }
@@ -43,7 +44,7 @@ export class FormComponent implements OnInit {
 
       })
     } else {
-      this.api.put("posts", data).subscribe((result) => {
+      this.api.put("posts/"+this.editedid,data).subscribe((result) => {
         this.load()
       })
     }
@@ -61,6 +62,10 @@ export class FormComponent implements OnInit {
   }
 
   edit(data: any) {
+    console.log(data);
+    this.editedid = data.id;
+    console.log(this.editedid);
+
     this.myForm = new FormGroup({
       name: new FormControl(data.name),
       email: new FormControl(data.email),

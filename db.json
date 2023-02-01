@@ -1,15 +1,10 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "id": 2,
-      "name": "Vivek",
+      "name": "Vivek DSDSDSD",
       "email": "v@gmail.com",
-      "password": "890808"
+      "password": "890808",
+      "id": 2
     },
     {
       "id": 3,
@@ -18,22 +13,16 @@
       "password": "0000"
     },
     {
-      "id": 4,
-      "name": "Aniket",
-      "email": "aniket@gmail.coM",
-      "password": "6666"
-    },
-    {
       "id": 6,
       "name": "Sagar",
       "email": "sagar@gmail.com",
       "password": "3333"
     },
     {
-      "id": 7,
-      "name": "Jaydeep",
+      "name": "JaydeepDDDD",
       "email": "jaydeep@gmail.com",
-      "password": "6666"
+      "password": "6666",
+      "id": 7
     },
     {
       "id": 8,

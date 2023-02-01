@@ -22,7 +22,7 @@ export class ApiService {
 
 
   put(url: string, data: any) {
-    return this.http.put(this.link + url + "/" + data.id, data);
+    return this.http.put(this.link + url, data);
   }
 
   delete(url: string, data: any) {
