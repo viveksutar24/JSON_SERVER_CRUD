@@ -1,0 +1,71 @@
+<div class="row justify-content-sm-center pt-5">
+  <div class="col-sm-6">
+    <form [formGroup]="myForm" (ngSubmit)="submit(myForm.value)">
+      <input type="text" style="display: none" formControlName="id" hidden />
+
+      <div class="form-group">
+        <label class="form-group">Name</label>
+        <input
+          class="form-control"
+          formControlName="name"
+          class="form-control"
+          placeholder="Your name"
+        />
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input
+          formControlName="email"
+          class="form-control"
+          placeholder="Your email"
+        />
+      </div>
+      <div class="form-group">
+        <label>Age</label>
+        <input
+          formControlName="password"
+          class="form-control"
+          placeholder="Your Password"
+        />
+      </div>
+      <div class="form-group">
+        <div style="display: flex; margin-top: 10px">
+          <button
+            type="submit"
+            class="btn btn-primary"
+            style="margin-left: auto; width: 30%"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<br />
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Password</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of datas; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ data.name }}</td>
+      <td>{{ data.email }}</td>
+      <td>{{ data.password }}</td>
+
+      <button (click)="edit(data)" class="btn btn-outline-primary">Edit</button>
+      <button (click)="delete(data)" class="btn btn-outline-danger">
+        Delete
+      </button>
+    </tr>
+  </tbody>
+</table>
